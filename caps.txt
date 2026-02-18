@@ -1,0 +1,12 @@
+colocar link de email no suporte no botão email suporte
+
+resolver pagina de rastreio para o rastreio no form na pagina de suporte
+
+fazer verificação nas paginas de messages
+
+para contato salvar só o ano mes dia para poder verificar quantas msg ele enviou no dia
+
+validar formulario de contato e colocar limite de strings que podem ser enviadas
+
+criar pagina de limite de mensagens diarias atingidas
+
