@@ -62,6 +62,7 @@
 
     if($analise){
 
+    
     header('Location:../../public/index.php?page=messages/smsdone');
 
     }else{

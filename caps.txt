@@ -10,3 +10,4 @@ validar formulario de contato e colocar limite de strings que podem ser enviadas
 
 criar pagina de limite de mensagens diarias atingidas
 
+adicionar limite de adição no carrinho 100

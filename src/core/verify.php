@@ -12,7 +12,8 @@ class Verify
         'exclusive',
         'messages/emaildone',
         'messages/emailcap',
-        'messages/smsdone'
+        'messages/smsdone',
+        'messages/smscap'
     ];
 
     /**

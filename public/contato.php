@@ -12,7 +12,7 @@
 <div class="max-w-xl w-full mx-auto lg:mx-0">
 
 <div class="space-y-3 mb-10">
-<h2 class="text-3xl lg:text-4xl font-medium text-stone-900 dark:text-stone-100">Entre em contato com a Intenso Cheiros</h2>
+<h2 class="text-3xl lg:text-4xl font-medium text-stone-900 dark:text-stone-100">Entre em contato com a Intenso Cheiro</h2>
 <p class="text-stone-500 dark:text-stone-400 font-light leading-relaxed">
                     Nosso concierge particular está disponível para consultas de fragrâncias personalizadas e consultas de atacado. Por favor, aguarde 24 horas para uma resposta curada.
                 </p>
@@ -21,16 +21,16 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="relative group">
 <label class="block text-xs uppercase tracking-widest text-primary mb-2 font-semibold">NOME COMPLETO</label>
-<input class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="Ritson Dev" type="text" autofocus tabeindex='1' required name='nome'/>
+<input class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="Ritson Dev" type="text" autofocus tabeindex='1' required name='nome' minlength="6" maxlength="20"/>
 </div>
 <div class="relative group">
 <label class="block text-xs uppercase tracking-widest text-primary mb-2 font-semibold">NÚMERO DE WHATSSAP</label>
-<input class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="(+244) 924 697 927" type="text" tabeindex='2' required name='numero'/>
+<input class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="(+244) 924 697 927" type="text" tabeindex='2' required name='numero' minlength="9" maxlength="12"/>
 </div>
 </div>
 <div class="relative group">
 <label class="block text-xs uppercase tracking-widest text-primary mb-2 font-semibold">MENSAGEM</label>
-<textarea class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all resize-none placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="Compartilhe suas preferências de fragrância ou dúvida..." rows="4" tabeindex='3' required name='msg'></textarea>
+<textarea class="w-full bg-transparent border-b border-primary/30 focus:border-primary py-3 outline-none transition-all resize-none placeholder:text-stone-600 dark:placeholder:text-stone-500 focus:ring-0" placeholder="Compartilhe suas preferências de fragrância ou dúvida..." rows="4" tabeindex='3' required name='msg' minlength="15" maxlength="195"></textarea>
 </div>
 <input type="hidden" name="action" value="contato">
 <div class="pt-4">
