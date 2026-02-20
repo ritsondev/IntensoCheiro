@@ -1,5 +1,6 @@
     <?php
 
+    session_start();
     require_once '../models/cliente_model.php';
     require_once '../models/contato_model.php';
     require_once '../models/customer.php';
@@ -17,7 +18,7 @@
     $dataAtual = new DateTime("now", new DateTimeZone('Africa/Luanda'));
     $inputdata=$dataAtual->format('Y-m-d H:i:s');
 
-    if(isset($email)){
+    if(isset($email,$inputdata)){
 
     $customer=new Customer(true);
     $analise=$customer->Create_Customer($email,$inputdata);
@@ -30,10 +31,13 @@
 
     if($analise){
 
+    $_SESSION['auth']='ok';
     header('Location:../../public/index.php?page=messages/emaildone');
+    exit;
 
     }else{
 
+    $_SESSION['auth']='ok';
     header('Location:../../public/index.php?page=messages/emailcap');
 
     }
@@ -62,11 +66,13 @@
 
     if($analise){
 
-    
+    $_SESSION['auth']='ok';
     header('Location:../../public/index.php?page=messages/smsdone');
+    exit;
 
     }else{
 
+    $_SESSION['auth']='ok';
     header('Location:../../public/index.php?page=messages/smscap');
 
     }

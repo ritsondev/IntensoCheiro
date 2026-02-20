@@ -23,7 +23,7 @@ class Verify
     {
         // normaliza
         $page = strtolower(trim($page));
-
+        
         // segurança: só letras
         if (!preg_match('/^[a-z\/]+$/', $page)) {
         return $this->pageNotFound();

@@ -83,9 +83,6 @@
 <div class="product-overlay absolute inset-0 bg-background-dark/60 opacity-0 flex items-center justify-center transition-smooth">
 <span class="px-8 py-3 bg-white text-background-dark text-[10px] font-bold uppercase tracking-widest">Vista Rápida</span>
 </div>
-<div class="absolute top-6 left-6">
-<span class="px-3 py-1 bg-primary text-background-dark text-[9px] font-black uppercase tracking-tighter">Exclusivo</span>
-</div>
 </div>
 <div class="text-center">
 <p class="text-[10px] tracking-[0.3em] uppercase text-primary font-bold mb-2">Shades of Bliss – Eau de Parfum</p>
