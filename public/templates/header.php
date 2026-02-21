@@ -1,3 +1,29 @@
+
+<?php
+
+if(!empty($_GET['prod'])){
+
+//dados de produto
+$numprod=$prod;
+
+$produto= new Produto('true');
+$dados=$produto->GetProdutoData($numprod);
+
+echo '<pre>';
+print_r($dados);
+echo '</pre>';
+if($dados==null){
+
+header('Location:../public/index.php?page=notfound');
+exit();
+
+}
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR"><head>
 <meta charset="utf-8"/>

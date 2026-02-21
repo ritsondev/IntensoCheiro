@@ -1,0 +1,20 @@
+INSERT INTO `produto`
+(`nome`, `type`, `descricao`, `minidesc`, `tittle1`, `tittle2`, `title3`, `preco_base`)
+VALUES
+('Shades of Bliss', 'perfume', 'Uma explosão radiante de luz e delicadeza. Shades of Bliss revela o instante em que pétalas douradas encontram o calor da pele, libertando acordes florais luminosos e nuances envolventes que celebram a alegria.',
+ 'Eau de Parfum', 'Mistura Solar', 'Quente, Luminoso, Feminino',
+ 'Floral • Moderado', 45000);
+
+INSERT INTO `incrementos` (`produto_idf_produto`, `categoria`, `genero`, `intensidade`, `notas_topo`, `notas_coracao`, `notas_base`, `quantidade`, `sillage`, `exp`, `longevidade`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO `exclusive` (`produto_idf_produto`) VALUES (NULL, NULL);
+
+INSERT INTO `ml` (`valor`, `preco`, `quantml`, `produto_idf_produto`) VALUES (NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO `img_product` (`link`, `produto_idf_produto`) VALUES (NULL, NULL, NULL);
+
+
+
+Mistura Solar
+Quente, Luminoso, Feminino
+

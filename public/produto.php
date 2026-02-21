@@ -1,19 +1,4 @@
-<?php
-
-
-//dados de produto
-$numprod=$prod;
-/*
-$produto= new Produto('true');
-$dados=$produto->GetProdutoData($numprod);
-
-if($dados==null){
-
-header('Location:../public/index.php?page=notfound');
-
-}
-*/
-?>
+<>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -42,12 +27,12 @@ header('Location:../public/index.php?page=notfound');
 </div>
 <div class="lg:col-span-5 space-y-10">
 <div>
-<h1 class="text-5xl lg:text-6xl font-bold mb-4">Oud Nocturne - <?=$numprod?></h1>
+<h1 class="text-5xl lg:text-6xl font-bold mb-4"><?=$dados["produto"][0]["nome"]?></h1>
 <p class="text-3xl font-bold text-primary tracking-wider opacity-100" id="main-price-container">$<span id="main-price">240.00</span></p>
 </div>
 <div class="space-y-6">
 <p class="text-white/60 leading-relaxed text-sm lg:text-base italic">
-                        Uma jornada celestial pelo coração do deserto árabe. Oud Nocturne captura o momento fugaz em que o sol mergulha sob as dunas, liberando os segredos profundos e resinosos de madeiras antigas e fumaça.
+                        <?=$dados["produto"][0]["descricao"]?>
                     </p>
 <div class="space-y-4 pt-4">
 <h3 class="text-[10px] tracking-[0.4em] uppercase font-bold text-primary border-b border-primary/20 pb-2">Notas de Fragrância</h3>
@@ -125,17 +110,10 @@ header('Location:../public/index.php?page=notfound');
 <div class="space-y-8">
 <h2 class="text-4xl font-bold">A Experiência Sensorial</h2>
 <p class="text-white/60 leading-relaxed">
-                        Isto é mais que uma fragrância; é uma arquitetura invisível. Oud Nocturne interage com o calor da pele para criar uma assinatura olfativa única que persiste por mais de 12 horas. A alta concentração de Extrait de Parfum garante que apenas um spray seja necessário para deixar um rastro majestoso.
+                        <?=$dados["incrementos"][0]["exp"]?>
                     </p>
 <div class="grid grid-cols-2 gap-8 pt-4">
-<div class="border-l-2 border-primary pl-6">
-<p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Sillage</p>
-<p class="text-2xl font-bold">Enorme</p>
-</div>
-<div class="border-l-2 border-primary pl-6">
-<p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Longevidade</p>
-<p class="text-2xl font-bold">12h+</p>
-</div>
+
 </div>
 </div>
 <div class="aspect-video bg-neutral-900 overflow-hidden">

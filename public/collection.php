@@ -37,12 +37,12 @@ PESQUISAR
 </select>
 </div>
 <div class="flex flex-col gap-2">
-<label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Intensidade</label>
+<label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Tipo</label>
 <select class="luxury-select">
 <option value="" class="bg-black">Todas</option>
-<option value="suave" class="bg-black">Suave</option>
-<option value="moderado" class="bg-black">Moderado</option>
-<option value="intenso" class="bg-black">Intenso</option>
+<option value="normal" class="bg-black">Normal</option>
+<option value="exclusivo" class="bg-black">Exclusivo</option>
+<option value="esgotando" class="bg-black">Esgotando</option>
 </select>
 </div>
 <div class="pt-6">

@@ -1,9 +1,9 @@
-<?php
-include_once("templates/header.php");
-?>
+INSERT INTO `produto` (`nome`, `type`, `descricao`, `minidesc`, `tittle1`, `tittle2`, `title3`, `preco_base`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
+INSERT INTO `incrementos` (`produto_idf_produto`, `categoria`, `genero`, `notas_topo`, `notas_coracao`, `notas_base`, `quantidade`, `exp`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
+INSERT INTO `exclusive` (`produto_idf_produto`) VALUES (NULL);
 
-<?php
-include_once("templates/footer.php");
-?>
+INSERT INTO `ml` (`preco`, `quantml`, `produto_idf_produto`) VALUES (NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO `img_product` (`link`, `produto_idf_produto`) VALUES (NULL, NULL, NULL);
