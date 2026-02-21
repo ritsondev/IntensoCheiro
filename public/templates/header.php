@@ -134,8 +134,6 @@
 
         }
 
-        <**>
-
         :root {
             --neon-gold: #f4c025;
             --neon-glow: rgba(244, 192, 37, 0.25);

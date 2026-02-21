@@ -2,13 +2,12 @@
 
     session_start();
     require_once '../src/core/Verify.php';
-
-
-$verify = new Verify();
+    require_once '../src/controllers/usercontroler.php';
+    $file=basename(__FILE__);
+    $verify = new Verify();
 
 // pega a página pedida
 $page = $_GET['page'] ?? 'home';
-
 //verificação das paginas de message
 
      $messagespage = [
@@ -33,8 +32,15 @@ $page = $_GET['page'] ?? 'home';
 
 }
 
+if(!empty($_GET['prod'])){
+
+$prod=$_GET['prod'];
+
+}
+
 // verifica se a página existe e é permitida
 $pageFile = $verify->resolvePublicPage($page);
+
 
 // carrega layout
 include_once("templates/header.php");

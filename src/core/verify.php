@@ -1,5 +1,7 @@
 <?php
 
+//incluir pagina de produto
+
 class Verify
 {
     private array $publicPages = [
@@ -10,6 +12,7 @@ class Verify
         'suporte',
         'carrinho',
         'exclusive',
+        'produto',
         'messages/emaildone',
         'messages/emailcap',
         'messages/smsdone',

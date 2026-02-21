@@ -1,7 +1,4 @@
 <?php
-require_once '../core/database.php';
-require_once '../core/verify.php';
-
 class Contato{
 
 public $status;

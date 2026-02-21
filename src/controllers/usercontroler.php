@@ -1,11 +1,6 @@
     <?php
 
-    session_start();
-    require_once '../models/cliente_model.php';
-    require_once '../models/contato_model.php';
-    require_once '../models/customer.php';
-    require_once '../models/produto.php';
-
+    require_once __DIR__ . '/../autoload.php';
     $action=filter_input(INPUT_POST,'action');
 
     if(isset($action)){

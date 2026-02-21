@@ -1,4 +1,19 @@
+<?php
 
+
+//dados de produto
+$numprod=$prod;
+/*
+$produto= new Produto('true');
+$dados=$produto->GetProdutoData($numprod);
+
+if($dados==null){
+
+header('Location:../public/index.php?page=notfound');
+
+}
+*/
+?>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -16,6 +31,7 @@
 <label class="thumb-label block aspect-[3/4] border border-white/10 cursor-pointer overflow-hidden opacity-60 transition-all duration-300 hover:opacity-100" for="img-3">
 <img alt="Thumb 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDit6WnFVneevtpwY7VrRxI5SZtPpDwcOL2-6xUc2kDj1-9jk9T-GPnTQU8Gg9yvocZOmRwnePXpP-HEhWgi1nIhnAVjctxAp90U95Am3eZ9oL7MuEyT1dtQBmtJwuJLYJEq6_IheE6jwhS-Icengg17VIWREKvfN5KZguZ1RZ2nMDFHTdrx2xnpH5rZPsDLcDSVZUy6oOWxu2j9dPlPbIYy0-cXelyXrBdoyQ_a9x2qTsqZbUe8hYbCISY0P_Qg8lXol1EtftX8A"/>
 </label>
+
 </div>
 <div class="col-span-10 border border-white/10 relative group main-gallery overflow-hidden">
 <img alt="Oud Nocturne Main View" class="main-img-1 w-full aspect-[4/5] object-cover transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK58QUqybzYFV7jGQQ2-KE690RhpVaryeXO63ihgsqRcPmNReD6sgUQC4--KlUMcpPIQtjxZKvMmP4NVeLYlmIsNJpDo1g8O92FzjK2_whmDmvfQol3LykRNHrkJYt36YUHj4viB5NpajRSepeVAUJS0ozVR209_LPfuCV1AljvFj-R-Q-83bsr8fyK2zqbP_VaFJ-ZjE5FTfaInhxd_UC0RBg-01xCO7XREnVTaN5CaRUbEdU5H0lzmAY2prryViTCTDBvblLA"/>
@@ -26,7 +42,7 @@
 </div>
 <div class="lg:col-span-5 space-y-10">
 <div>
-<h1 class="text-5xl lg:text-6xl font-bold mb-4">Oud Nocturne</h1>
+<h1 class="text-5xl lg:text-6xl font-bold mb-4">Oud Nocturne - <?=$numprod?></h1>
 <p class="text-3xl font-bold text-primary tracking-wider opacity-100" id="main-price-container">$<span id="main-price">240.00</span></p>
 </div>
 <div class="space-y-6">

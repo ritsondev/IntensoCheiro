@@ -77,6 +77,9 @@
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<a href="index.php?page=produto&prod=1">
+
 <div class="group perfume-card-hover cursor-pointer">
 <div class="relative aspect-[4/5] bg-neutral-dark mb-6 overflow-hidden border border-white/5 transition-smooth group-hover:border-primary/30">
 <img alt="Oud Imperial" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-smooth" src=".\assets\img\p7.png"/>
@@ -91,6 +94,11 @@
 <p class="text-lg font-serif text-primary">45.000kz</p>
 </div>
 </div>
+
+</a>
+
+<a href="index.php?page=produto&prod=2">
+
 <div class="group perfume-card-hover cursor-pointer">
 <div class="relative aspect-[4/5] bg-neutral-dark mb-6 overflow-hidden border border-white/5 transition-smooth group-hover:border-primary/30">
 <img alt="Velvet Rose" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-smooth" src=".\assets\img\p5.png"/>
@@ -105,6 +113,10 @@
 <p class="text-lg font-serif text-primary">45.000kz</p>
 </div>
 </div>
+
+</a>
+
+<a href="index.php?page=produto&prod=3">
 <div class="group perfume-card-hover cursor-pointer">
 <div class="relative aspect-[4/5] bg-neutral-dark mb-6 overflow-hidden border border-white/5 transition-smooth group-hover:border-primary/30">
 <img alt="Amber Gold" class="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-smooth" src=".\assets\img\p8.png"/>
@@ -119,6 +131,8 @@
 <p class="text-lg font-serif text-primary">45.000kz</p>
 </div>
 </div>
+</a>
+
 </div>
 </div>
 </section>

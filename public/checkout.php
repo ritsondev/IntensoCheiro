@@ -27,12 +27,12 @@
 </div>
 <div class="md:col-span-2 space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Endereço de Entrega</label>
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Rua, Número, Complemento, Bairro e CEP" type="text"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Rua, Número, Complemento, Bairro e NIF" type="text"/>
 </div>
 <div class="md:col-span-2 space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Número do WhatsApp</label>
 <div class="relative">
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 999 999 999" type="tel"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 924 697 927" type="tel"/>
 <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-sm text-primary/60">chat</span>
 </div>
 </div>
@@ -50,18 +50,18 @@
 <input checked="" class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" type="radio"/>
 <div class="ml-4 flex-1">
 <div class="flex justify-between items-center">
-<span class="text-sm font-semibold uppercase tracking-wider">Premium Express</span>
+<span class="text-sm font-semibold uppercase tracking-wider">Intenso cheiro</span>
 <span class="text-primary text-sm">Grátis</span>
 </div>
-<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">2-3 Dias Úteis • Entrega Segurada</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">2-7 Dias Úteis • Entrega Segurada</p>
 </div>
 </label>
 <label class="flex items-center p-4 border border-primary/10 rounded-lg hover:border-primary/30 cursor-pointer transition-all">
 <input class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" type="radio"/>
 <div class="ml-4 flex-1">
 <div class="flex justify-between items-center">
-<span class="text-sm font-semibold uppercase tracking-wider">Next Day Concierge</span>
-<span class="text-sm">R$ 150,00</span>
+<span class="text-sm font-semibold uppercase tracking-wider">Intenso Premium</span>
+<span class="text-sm">3500kz</span>
 </div>
 <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Entrega em 24h • Serviço Personalizado</p>
 </div>
@@ -133,3 +133,4 @@
 </div>
 </div>
 </main>
+
