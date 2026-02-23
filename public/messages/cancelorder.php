@@ -1,5 +1,5 @@
 <?php
-include_once("templates/header.php");
+include_once("../templates/header.php");
 ?>
 
 <main class="flex-grow flex flex-col items-center py-16 px-6 max-w-4xl mx-auto w-full">
@@ -71,5 +71,5 @@ include_once("templates/header.php");
 </main>
 
 <?php
-include_once("templates/footer.php");
+include_once("../templates/footer.php");
 ?>

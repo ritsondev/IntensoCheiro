@@ -1,6 +1,3 @@
-<?php
-include_once("templates/header.php");
-?>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <section class="max-w-[1600px] mx-auto w-full px-4 md:px-8 pt-48 pb-16 bg-black relative">
 <div class="mb-16 space-y-10">
@@ -172,7 +169,3 @@ PESQUISAR
 </div>
 </div>
 </div>
-
-<?php
-include_once("templates/footer.php");
-?>

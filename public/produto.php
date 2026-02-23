@@ -27,7 +27,7 @@
 <div class="lg:col-span-5 space-y-10">
 <div>
 <h1 class="text-5xl lg:text-6xl font-bold mb-4"><?=$dados["produto"][0]["nome"]?></h1>
-<p class="text-3xl font-bold text-primary tracking-wider opacity-100" id="main-price-container">$<span id="main-price">240.00</span></p>
+<p class="text-3xl font-bold text-primary tracking-wider opacity-100" id="main-price-container"><span id="main-price"><?= $dados["quantidades"][0]["preco"] ?></span>kz</p>
 </div>
 <div class="space-y-6">
 <p class="text-white/60 leading-relaxed text-sm lg:text-base italic">
@@ -40,21 +40,21 @@
 <span class="material-symbols-outlined text-primary mt-1">auto_awesome</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Topo</h4>
-<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_topo"]?></p>
+<p class="text-sm text-white/60">Açafrão, Cardamomo, Pimenta Preta</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">favorite</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Coração</h4>
-<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_coracao"]?></p>
+<p class="text-sm text-white/60">Oud do Camboja, Jasmim Noturno, Rosa Turca</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">forest</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Base</h4>
-<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_base"]?></p>
+<p class="text-sm text-white/60">Couro, Âmbar, Patchouli, Sândalo</p>
 </div>
 </div>
 </div>
@@ -63,19 +63,18 @@
 <div class="space-y-8 pt-6">
 <div>
 <h3 class="text-[10px] tracking-[0.4em] uppercase font-bold text-white/40 mb-4">Selecionar Volume</h3>
+
+
 <div class="flex gap-4">
+
+<?php foreach($dados["quantidades"] as $index => $qtd):?>
+
 <div class="flex-1">
-<input class="hidden volume-input" id="vol-30" name="volume" onchange="updateVolume(30, 140.00)" type="radio" value="30"/>
-<label class="volume-label flex items-center justify-center py-3 border border-primary text-white/80 text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-300 hover:bg-primary/5" for="vol-30">30ml</label>
+<input class="hidden volume-input" id="vol-<?= $qtd['quantml'] ?>" name="volume" <?= $index === 0 ? 'checked' : '' ?> onchange="updateVolume(<?= $qtd['quantml'] ?>, <?= $qtd['preco'] ?>)" type="radio" value="<?= $qtd['quantml'] ?>"/>
+<label class="volume-label flex items-center justify-center py-3 border border-primary text-white/80 text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-300 hover:bg-primary/5" for="vol-<?= $qtd['quantml'] ?>"><?= $qtd['quantml'] ?>ml</label>
 </div>
-<div class="flex-1">
-<input checked="" class="hidden volume-input" id="vol-50" name="volume" onchange="updateVolume(50, 240.00)" type="radio" value="50"/>
-<label class="volume-label flex items-center justify-center py-3 border border-primary text-white/80 text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-300 hover:bg-primary/5" for="vol-50">50ml</label>
-</div>
-<div class="flex-1">
-<input class="hidden volume-input" id="vol-100" name="volume" onchange="updateVolume(100, 380.00)" type="radio" value="100"/>
-<label class="volume-label flex items-center justify-center py-3 border border-primary text-white/80 text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-300 hover:bg-primary/5" for="vol-100">100ml</label>
-</div>
+
+<?php endforeach; ?>
 </div>
 </div>
 <div class="space-y-4">
@@ -123,7 +122,7 @@
 <section class="mt-32">
 <div class="flex items-end justify-between mb-12 border-b border-white/5 pb-6">
 <h2 class="text-3xl font-bold">Você Também Pode Buscar</h2>
-<a class="text-[10px] uppercase tracking-widest text-primary font-bold hover:text-white transition-colors" href="#">Ver Coleção Completa</a>
+<a class="text-[10px] uppercase tracking-widest text-primary font-bold hover:text-white transition-colors" href="index.php?page=collection">Ver Coleção Completa</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div class="group">
@@ -176,14 +175,14 @@
 <img alt="Oud Nocturne Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK58QUqybzYFV7jGQQ2-KE690RhpVaryeXO63ihgsqRcPmNReD6sgUQC4--KlUMcpPIQtjxZKvMmP4NVeLYlmIsNJpDo1g8O92FzjK2_whmDmvfQol3LykRNHrkJYt36YUHj4viB5NpajRSepeVAUJS0ozVR209_LPfuCV1AljvFj-R-Q-83bsr8fyK2zqbP_VaFJ-ZjE5FTfaInhxd_UC0RBg-01xCO7XREnVTaN5CaRUbEdU5H0lzmAY2prryViTCTDBvblLA"/>
 </div>
 <div class="text-left space-y-2">
-<p class="text-base font-bold uppercase tracking-[0.2em]">Oud Nocturne</p>
-<p class="text-[11px] text-white/50 uppercase tracking-widest">Volume: <span id="modal-volume">50ML</span></p>
-<p class="text-primary font-bold text-lg tracking-widest">$<span id="modal-price">240.00</span></p>
-<p class="text-[11px] text-white/50 uppercase tracking-widest">Quantidade: <span id="modal-qty">1</span></p>
+<p class="text-base font-bold uppercase tracking-[0.2em]"><?=$dados["produto"][0]["nome"]?></p>
+<p class="text-[11px] text-white/50 uppercase tracking-widest">Volume: <span id="modal-volume"></span></p>
+<p class="text-primary font-bold text-lg tracking-widest"><span id="modal-price">00</span>kz</p>
+<p class="text-[11px] text-white/50 uppercase tracking-widest">Quantidade: <span id="modal-qty"></span></p>
 </div>
 </div>
 <div class="w-full space-y-6">
-<a class="block w-full bg-primary text-black py-5 text-[12px] font-bold uppercase tracking-[0.4em] hover:bg-white transition-all duration-300 text-center" href="#">
+<a class="block w-full bg-primary text-black py-5 text-[12px] font-bold uppercase tracking-[0.4em] hover:bg-white transition-all duration-300 text-center" href="index.php?page=carrinho">
                         IR PARA O CARRINHO
                     </a>
 <label class="block cursor-pointer text-[10px] uppercase tracking-[0.4em] text-primary hover:text-white transition-all duration-300 underline underline-offset-8 decoration-primary/40" for="cart-modal-toggle">
@@ -195,8 +194,8 @@
 </div>
 <script>
         let quantity = 1;
-        let currentVolume = '50ML';
-        let currentPrice = 240.00;
+        let currentVolume = <?=$dados["quantidades"][0]["quantml"] ?>;
+        let currentPrice = <?=$dados["quantidades"][0]["preco"] ?>;
         const qtyDisplay = document.getElementById('qty-display');
         const btnQtyDisplay = document.getElementById('btn-qty');
         const modalQty = document.getElementById('modal-qty');
@@ -209,7 +208,7 @@
             currentPrice = price;
             mainPriceContainer.style.opacity = '0';
             setTimeout(() => {
-                mainPriceSpan.innerText = price.toFixed(2);
+                mainPriceSpan.innerText = price.toFixed();
                 mainPriceContainer.style.opacity = '1';
             }, 200);
             updateDisplay();
@@ -218,7 +217,7 @@
             qtyDisplay.innerText = quantity;
             btnQtyDisplay.innerText = quantity;
             modalQty.innerText = quantity;
-            modalPriceSpan.innerText = currentPrice.toFixed(2);
+            modalPriceSpan.innerText = currentPrice.toFixed();
             modalVolumeSpan.innerText = currentVolume;
         }
         function incrementQty() {

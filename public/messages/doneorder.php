@@ -1,3 +1,8 @@
+<?php
+include_once("templates/header.php");
+?>
+
+
 <main class="flex-grow flex items-center justify-center py-16 md:py-24 px-6">
 <div class="max-w-5xl w-full mx-auto">
 <section class="text-center mb-20">
@@ -95,3 +100,7 @@
 </div>
 </div>
 </main>
+
+<?php
+include_once("templates/footer.php");
+?>
