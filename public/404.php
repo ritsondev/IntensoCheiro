@@ -1,5 +1,5 @@
 <?php
-include_once("templates/header.php");
+defined('CONTROL') or die('Acesso negado');
 ?>
 
 <main class="flex-grow flex flex-col items-center justify-center relative px-6 py-20 pt-24 overflow-hidden">
@@ -34,7 +34,3 @@ include_once("templates/header.php");
 
 </div>
 </main>
-
-<?php
-include_once("templates/footer.php");
-?>

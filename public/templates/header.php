@@ -1,6 +1,4 @@
-
 <?php
-
 if(!empty($_GET['prod'])){
 
 //dados de produto

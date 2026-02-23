@@ -1,4 +1,3 @@
-<>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -41,21 +40,21 @@
 <span class="material-symbols-outlined text-primary mt-1">auto_awesome</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Topo</h4>
-<p class="text-sm text-white/60">Açafrão, Cardamomo, Pimenta Preta</p>
+<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_topo"]?></p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">favorite</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Coração</h4>
-<p class="text-sm text-white/60">Oud do Camboja, Jasmim Noturno, Rosa Turca</p>
+<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_coracao"]?></p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">forest</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Base</h4>
-<p class="text-sm text-white/60">Couro, Âmbar, Patchouli, Sândalo</p>
+<p class="text-sm text-white/60"><?=$dados["incrementos"][0]["notas_base"]?></p>
 </div>
 </div>
 </div>
@@ -223,8 +222,11 @@
             modalVolumeSpan.innerText = currentVolume;
         }
         function incrementQty() {
-            quantity++;
-            updateDisplay();
+            const maxQty = 10; // limite máximo
+            if (quantity < maxQty) {
+                quantity++;
+                updateDisplay();
+            }
         }
         function decrementQty() {
             if (quantity > 1) {

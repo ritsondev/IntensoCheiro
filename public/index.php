@@ -26,7 +26,7 @@ $page = $_GET['page'] ?? 'home';
     unset($_SESSION['auth']);
 
     }else{
-    header('Location: index.php?page=home');
+    header('Location:index.php?page=home');
 
     }
 
