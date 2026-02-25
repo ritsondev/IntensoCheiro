@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <!DOCTYPE html>
 
 <html class="dark" lang="pt-BR"><head>

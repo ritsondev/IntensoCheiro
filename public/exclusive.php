@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <input class="hidden peer" id="success-modal-toggle" type="checkbox"/>
 <main class="py-24 px-6 max-w-7xl mx-auto">
 <div class="text-center mb-32">

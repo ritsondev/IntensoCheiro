@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main>
 <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">

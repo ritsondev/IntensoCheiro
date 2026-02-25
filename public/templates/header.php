@@ -1,4 +1,5 @@
 <?php
+defined('CONTROL') or die('Acesso negado');
 if(!empty($_GET['prod'])){
 
 //dados de produto
@@ -31,6 +32,8 @@ exit();
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+
 <style type="text/tailwindcss">
         @layer utilities {
             .gold-gradient-text {

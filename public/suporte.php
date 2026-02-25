@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="pt-32 pb-24">
 <section class="max-w-4xl mx-auto px-6 text-center mb-24">
 <h1 class="serif-text text-4xl md:text-6xl font-light text-white mb-6">Políticas e Suporte</h1>

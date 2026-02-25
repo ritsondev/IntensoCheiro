@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="relative z-10">
 <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden" id="hero">
 <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

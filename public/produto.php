@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -115,7 +116,7 @@
 </div>
 </div>
 <div class="aspect-video bg-neutral-900 overflow-hidden">
-<img alt="Fragrance Creation" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLej2ZcZ7_De85bqKH6LA8q-GKPsHh76HWYyALJV0MrlKKXAZkAJoSKRVTcO72J4GjWRXCmQrQbLhUSGbjnO2aR7F6pkGQe6-5J_JKH_g_F1ZRz_hDZ_WDdCROp0sy7KThld1KwKmgZ-C7bKJhucXi2UXZJYyjHj2HlgNv49oIASiVMGgskndboL4-wjunf06X_ZWMCS7ohnjIOqXP3M16nBmUp2tsOyvW42WSPD6P0xH_kugk0hieaIqWPaatCtNGmWcd2hTMIA"/>
+<img alt="Fragrance Creation" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" src="<?=$dados["imagens"][0]["link"]?>"/>
 </div>
 </div>
 </section>

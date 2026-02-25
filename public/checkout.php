@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="relative z-10 pt-32 pb-24">
 <div class="container mx-auto px-6">
 <div class="mb-16">

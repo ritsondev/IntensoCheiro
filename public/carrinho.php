@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="relative z-10 pt-32 pb-24">
 <div class="container mx-auto px-6">
 <div class="mb-16">
@@ -23,10 +24,10 @@
 <td class="py-8">
 <div class="flex items-center space-x-6">
 <div class="w-24 h-24 bg-neutral-dark rounded-lg flex items-center justify-center border border-primary/5">
-<img alt="L'Essence Royale" class="w-16 h-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNf6mRJxynHsvS0KDiqsXhPRAJDoFtaNoFBzz7aYrSZV-2yKiVKJcq91QyhcUzpnjUSL292Z5NLLSQFyK2pgugHyjBOG1jCfm9LodH8lUPnVnxYpXvjliA0Myxh0dJ-P4fy8YMsb2PDcHozkcYphSIOodkLGmdWdE9w13_2RNv3mj_7f9Pf8KmgjsaV4ns8EeLgGh4mgZxd77aorR2PYDYl9rhCMfCqntPLjPiIOMT5GYiUWBPQZHlnjShDrEwe1GAxjTRHjzPOg"/>
+<img alt="L'Essence Royale" class="w-16 h-16 object-contain" src=".\assets\img\p7.png"/>
 </div>
 <div>
-<h3 class="font-serif text-lg font-bold mb-1">L'Essence Royale</h3>
+<h3 class="font-serif text-lg font-bold mb-1">Shades of Bliss</h3>
 <p class="text-xs text-slate-500 uppercase tracking-widest">100ml / Parfum</p>
 <button class="mt-4 text-[10px] tracking-widest uppercase text-primary/60 hover:text-primary transition-colors flex items-center">
 <span class="material-symbols-outlined text-sm mr-1">close</span> Remover
@@ -46,24 +47,10 @@
 </div>
 </td>
 <td class="py-8 text-right">
-<p class="font-serif text-lg font-bold">$285.00</p>
+<p class="font-serif text-lg font-bold">45.000kz</p>
 </td>
 </tr>
 <tr>
-<td class="py-8">
-<div class="flex items-center space-x-6">
-<div class="w-24 h-24 bg-neutral-dark rounded-lg flex items-center justify-center border border-primary/5">
-<img alt="Oud Mystique" class="w-16 h-16 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNf6mRJxynHsvS0KDiqsXhPRAJDoFtaNoFBzz7aYrSZV-2yKiVKJcq91QyhcUzpnjUSL292Z5NLLSQFyK2pgugHyjBOG1jCfm9LodH8lUPnVnxYpXvjliA0Myxh0dJ-P4fy8YMsb2PDcHozkcYphSIOodkLGmdWdE9w13_2RNv3mj_7f9Pf8KmgjsaV4ns8EeLgGh4mgZxd77aorR2PYDYl9rhCMfCqntPLjPiIOMT5GYiUWBPQZHlnjShDrEwe1GAxjTRHjzPOg"/>
-</div>
-<div>
-<h3 class="font-serif text-lg font-bold mb-1">Oud Mystique</h3>
-<p class="text-xs text-slate-500 uppercase tracking-widest">50ml / Eau de Parfum</p>
-<button class="mt-4 text-[10px] tracking-widest uppercase text-primary/60 hover:text-primary transition-colors flex items-center">
-<span class="material-symbols-outlined text-sm mr-1">close</span> Remover
-                                                </button>
-</div>
-</div>
-</td>
 <td class="py-8">
 <div class="flex items-center justify-center space-x-4">
 <button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors">
@@ -76,7 +63,7 @@
 </div>
 </td>
 <td class="py-8 text-right">
-<p class="font-serif text-lg font-bold">$195.00</p>
+<p class="font-serif text-lg font-bold">45.000kz</p>
 </td>
 </tr>
 </tbody>
@@ -95,19 +82,19 @@
 <div class="space-y-6 mb-10">
 <div class="flex justify-between items-center text-sm">
 <span class="text-slate-400 font-light tracking-wide">Subtotal</span>
-<span class="font-medium">$480.00</span>
+<span class="font-medium">45.000kz</span>
 </div>
 <div class="flex justify-between items-center text-sm">
 <span class="text-slate-400 font-light tracking-wide">Envio</span>
-<span class="font-medium">Gratuito</span>
+<span class="font-medium">3.000kz</span>
 </div>
 <div class="flex justify-between items-center text-sm">
 <span class="text-slate-400 font-light tracking-wide">Taxas (Estimadas)</span>
-<span class="font-medium">$42.50</span>
+<span class="font-medium">500kz</span>
 </div>
 <div class="pt-6 border-t border-primary/10 flex justify-between items-center">
 <span class="font-serif text-xl font-bold uppercase tracking-widest">TOTAL</span>
-<span class="font-serif text-2xl font-bold text-primary">$522.50</span>
+<span class="font-serif text-2xl font-bold text-primary">48.500kz</span>
 </div>
 </div>
 <div class="space-y-4">

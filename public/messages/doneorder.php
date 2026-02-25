@@ -1,8 +1,4 @@
-<?php
-include_once("templates/header.php");
-?>
-
-
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="flex-grow flex items-center justify-center py-16 md:py-24 px-6">
 <div class="max-w-5xl w-full mx-auto">
 <section class="text-center mb-20">

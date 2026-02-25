@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <footer class="bg-black pt-24 pb-12 border-t border-primary/10" id="contact">
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">

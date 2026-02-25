@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    define('CONTROL',true);
     require_once '../src/core/Verify.php';
     require_once '../src/controllers/usercontroler.php';
     $file=basename(__FILE__);
@@ -8,6 +9,8 @@
 
 // pega a página pedida
 $page = $_GET['page'] ?? 'home';
+
+
 //verificação das paginas de message
 
      $messagespage = [
@@ -29,6 +32,12 @@ $page = $_GET['page'] ?? 'home';
     header('Location:index.php?page=home');
 
     }
+
+}
+
+if($page=='' || $page==null){
+
+$page = $_GET['page']= 'home';
 
 }
 

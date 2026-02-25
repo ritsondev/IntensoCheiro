@@ -1,7 +1,4 @@
-<?php
-include_once("../templates/header.php");
-?>
-
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="flex-grow max-w-5xl mx-auto w-full px-6 py-12 lg:py-20">
 <div class="mb-16 text-center md:text-left">
 <span class="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-3 block">Acompanhamento</span>

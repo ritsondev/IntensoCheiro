@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <section class="max-w-[1600px] mx-auto w-full px-4 md:px-8 pt-48 pb-16 bg-black relative">
 <div class="mb-16 space-y-10">
@@ -64,80 +65,80 @@ PESQUISAR
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Oud Imperial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Jw15QAtQVZLFpXBVtQ1Cywm-juFSySt7C3nsQ0BGGVZ0ATaDaCSLvfL8SYShEiBVQbbQrZQH5t66rwcW1C25PsPL6HAHfjQH-KK3y1PbSHRZ5XUYayqdOihpwhnAR7orMB_vEmdsEfhbp195LYM56bPTkWou7Qga27cdRZe3onUhEUDsNfSt-6BAKI58fvnCBoPUnJ1_jlal702iwsNxJPxIl7zKuVTKibL0lO3aF8cwIMXypFP8yUUuZlXrHEzwksYmHR4gzA"/>
+<img alt="Oud Imperial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p1.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Amadeirado • Intenso</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Oud Imperial</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 1.580,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Ciensun</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Velvet Rose" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIqYbZdJPsdGFwfWfhGG13-Pu0B_RP0TyvlSIf9Oj819LzJrRjlShlfm3OG8_HEewHYc1UDYGuquEIzO_QAmrJV1hTsetmFi0lRsb7K_6sllUmcX1Z7pxDlOYAOWcM52ftjYMdZCfuNeWEu-Hd9uJ8wbKSPCE47Gg5UZy1-9mBcobjwWBEBf7TtwGXd3GT9fNu0QI_PmQVCOXXBgAwXmpc3FB_VZgLXObAKTq-j7DAmfqwiytR7uhqY2qXq0tcMFQyd3uAF7h3uA"/>
+<img alt="Velvet Rose" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p2.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Floral • Moderado</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Velvet Rose</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 495,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Oboticário</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Gold Ember" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX86CvcqYCw7e8KlTa8DExwApdD8AfzS-wb1MiiV7Ti7w6w52EgUpHYkD6wDAmajCnrMe2aa_GS-g8ZEK5xLUnCKR6hV45sox_IikNz9I8fzVYJUHE-iBcAlVwb96k_lDenbY3VrM9C87zlPw7VS-xYLrWw9dku5cO9iwX2CfuhxHdZgTxefYVwVgVkvWouapAgPj18vM-7xALcZDS4TXRreG_51NN_c63t0wVW3CniSmd3xMzTJvCFiKEylXHQRPkbcqbOVkcpw"/>
+<img alt="Gold Ember" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p3.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Oriental • Intenso</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Gold Ember</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 2.720,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Native spa</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Citrus Noir" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkvojB4yu90dSJCuRahcDBakAePvdyoDzyQyCtLC9fT3UGyNCbniTEYvTYXFzstBsbOuBGvgCxuoBGMKflpPc2q19vNEnrHUxnXuu8n9ss9KSL90VVtGeuBv1P3JZYwEcGphh3UTvZ3fBLHf5d78shduWKemSFdaKjgtTcqGm5WhoYEnckVsbesUEkx6jD0VcwB-9UnNXNjzF0WU8ZXnRhoNkeLmcwNQzDCI5pLvRGDVxLuJ3RsHVv4gHQJ2-akRK0RaIHOcXE0w"/>
+<img alt="Citrus Noir" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p4.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Cítrico • Suave</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Citrus Noir</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 380,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Splended Bronze</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Nocturnal Wood" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX_APtQiM7Bb79W2N2RTcf35JckaooXXZrFeLFwzHJN1nqsDYxoGyF0vl08NHiiUCBj4ZERLjRekrq5WQSIbTMg7ilvQU-ivjv1n3zAYUJ_P4Gk31WKtonKCSlQhBRmOikgrMUK9Wsap3hVrCSKOntChTX088GO57lYGI6ZQpOVFcuWFpiipj2lCaI6vJ6YQGlEGdwldAIh9lRUkNvomjqiSmZVk7q_1YNAQ2cQ7sqeBLTfBjyoBYUbHxtHUEJr7VJfJRn1V46mQ"/>
+<img alt="Nocturnal Wood" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p5.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Amadeirado • Intenso</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Nocturnal Wood</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 1.640,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Crispy Gardenia</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Saffron Dusk" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_L_CfSKk-CCttlf3UeeRFfKA_53FlJCLbN6YLI-FQKnjrOoj6rc4Rq_7rAVlgtqvSKkh3PGjJE8TAWkYBWvgJ1HFWz5QstsBSrwN444aX9QQXcMC65JNE6XNR0DbosePp09U_ApIMmtVnJC5WdtfAITi5xH8wNFK_IMzw2oPQaGvFONDOrDZGFC6bWgDmnZDKO1HXuk-2_9p7QSAyxcWrPX3Nfdyr8OaOmqP0lOfz_NSQm_R3Rv2keOsNZAKiyJ-YHyIZSW-U_w"/>
+<img alt="Saffron Dusk" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./assets/img/p6.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
 <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" for="cart-modal-toggle">Adicionar à Bolsa</label>
 </div>
 </div>
 <div class="text-center">
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">Oriental • Moderado</p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Saffron Dusk</h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]">R$ 510,00</p>
+<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">Ciansun</h3>
+<p class="text-primary text-xl font-medium tracking-[0.1em]">45.000kz</p>
 </div>
 </div>
 </div>
@@ -156,7 +157,7 @@ PESQUISAR
 <h2 class="text-2xl font-light italic text-white mb-8 tracking-wide">Fragrância adicionada com sucesso!</h2>
 <div class="flex justify-center mb-10">
 <div class="w-32 aspect-[3/4] bg-black border border-white/10 p-1">
-<img alt="Produto Selecionado" class="w-full h-full object-cover grayscale-[30%] opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Jw15QAtQVZLFpXBVtQ1Cywm-juFSySt7C3nsQ0BGGVZ0ATaDaCSLvfL8SYShEiBVQbbQrZQH5t66rwcW1C25PsPL6HAHfjQH-KK3y1PbSHRZ5XUYayqdOihpwhnAR7orMB_vEmdsEfhbp195LYM56bPTkWou7Qga27cdRZe3onUhEUDsNfSt-6BAKI58fvnCBoPUnJ1_jlal702iwsNxJPxIl7zKuVTKibL0lO3aF8cwIMXypFP8yUUuZlXrHEzwksYmHR4gzA"/>
+<img alt="Produto Selecionado" class="w-full h-full object-cover grayscale-[30%] opacity-80" src="./assets/img/p1.png"/>
 </div>
 </div>
 <div class="flex flex-col gap-4">

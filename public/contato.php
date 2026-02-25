@@ -1,3 +1,4 @@
+<?php defined('CONTROL') or die('Acesso negado')?>
 <div class="flex flex-col lg:flex-row min-h-screen pt-24 lg:pt-28">
 <section class="lg:w-1/2 relative h-[40vh] lg:h-auto overflow-hidden">
 <div class="absolute inset-0 bg-black/40 z-10"></div>

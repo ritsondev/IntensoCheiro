@@ -1,7 +1,4 @@
-<?php
-include_once("../templates/header.php");
-?>
-
+<?php defined('CONTROL') or die('Acesso negado')?>
 <main class="flex-grow flex flex-col items-center py-16 px-6 max-w-4xl mx-auto w-full">
 <!-- Status Icon -->
 <div class="mb-8 relative">
