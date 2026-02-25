@@ -10,6 +10,28 @@
 // pega a página pedida
 $page = $_GET['page'] ?? 'home';
 
+if(!empty(filter_input(INPUT_POST,'action'))){
+
+$insert=filter_input(INPUT_POST,'action');
+
+if($insert=='customer' || $insert=='contato'){
+
+    $insertdatas=new Controller($insert);
+    if($insert=='customer'){
+    $email=filter_input(INPUT_POST,'email'); 
+    $insertdatas->insertCustomer($email);
+}
+
+if($insert=='contato'){
+    $nome=filter_input(INPUT_POST,'nome');
+    $numero=filter_input(INPUT_POST,'numero');
+    $msg=filter_input(INPUT_POST,'msg');
+    $insertdatas->insertContato($nome,$numero,$msg);
+}
+
+}
+
+}
 
 //verificação das paginas de message
 

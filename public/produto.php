@@ -3,27 +3,58 @@
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 <div class="lg:col-span-7 grid grid-cols-12 gap-4">
-<input checked="" class="hidden thumb-input" id="img-1" name="gallery" type="radio"/>
-<input class="hidden thumb-input" id="img-2" name="gallery" type="radio"/>
-<input class="hidden thumb-input" id="img-3" name="gallery" type="radio"/>
+
+<?php foreach ($dados['imagens'] as $i => $imagem): ?>
+    
+<input 
+    <?= $i == 0 ? 'checked' : '' ?>
+    class="hidden thumb-input"
+    id="img-<?= $i+1 ?>"
+    name="gallery"
+    type="radio"
+/>
+
+<?php endforeach; ?>
+
+
 <div class="col-span-2 space-y-4">
-<label class="thumb-label block aspect-[3/4] border border-white/10 cursor-pointer overflow-hidden opacity-60 transition-all duration-300 hover:opacity-100" for="img-1">
-<img alt="Thumb 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK58QUqybzYFV7jGQQ2-KE690RhpVaryeXO63ihgsqRcPmNReD6sgUQC4--KlUMcpPIQtjxZKvMmP4NVeLYlmIsNJpDo1g8O92FzjK2_whmDmvfQol3LykRNHrkJYt36YUHj4viB5NpajRSepeVAUJS0ozVR209_LPfuCV1AljvFj-R-Q-83bsr8fyK2zqbP_VaFJ-ZjE5FTfaInhxd_UC0RBg-01xCO7XREnVTaN5CaRUbEdU5H0lzmAY2prryViTCTDBvblLA"/>
-</label>
-<label class="thumb-label block aspect-[3/4] border border-white/10 cursor-pointer overflow-hidden opacity-60 transition-all duration-300 hover:opacity-100" for="img-2">
-<img alt="Thumb 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ1oCs8FAJhutrfLlc6tnFCCbURfbg_NfOzqo6DFgw5kCYkw-Nq-13-4eIGa_0daPIkyhPI3lKswO6Uu8FHvP3Ju81pOyIaDHYGAmgmJaHLfKwKA3cMmJ8HcotdPqJOLZMTx9tT9wktsCkMo8WdiuRAPy4RAiIrOhH7KWpk8Y15fXzc_t6e33e9YT8h141mcoKfBxLNT5xPz310rVcr-rHz7MQ1mwF840OmRvA60RmeFOet3yGt9MA18xWNixZ_NmDbLjybjRGEw"/>
-</label>
-<label class="thumb-label block aspect-[3/4] border border-white/10 cursor-pointer overflow-hidden opacity-60 transition-all duration-300 hover:opacity-100" for="img-3">
-<img alt="Thumb 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDit6WnFVneevtpwY7VrRxI5SZtPpDwcOL2-6xUc2kDj1-9jk9T-GPnTQU8Gg9yvocZOmRwnePXpP-HEhWgi1nIhnAVjctxAp90U95Am3eZ9oL7MuEyT1dtQBmtJwuJLYJEq6_IheE6jwhS-Icengg17VIWREKvfN5KZguZ1RZ2nMDFHTdrx2xnpH5rZPsDLcDSVZUy6oOWxu2j9dPlPbIYy0-cXelyXrBdoyQ_a9x2qTsqZbUe8hYbCISY0P_Qg8lXol1EtftX8A"/>
+
+<?php foreach($dados['imagens'] as $i => $imagem): ?>
+
+<label 
+class="thumb-label block aspect-[3/4] border border-white/10 cursor-pointer overflow-hidden opacity-60 transition-all duration-300 hover:opacity-100"
+for="img-<?= $i+1 ?>"
+>
+
+<img 
+class="w-full h-full object-cover"
+src="<?= htmlspecialchars($imagem['link']) ?>"
+>
+
 </label>
 
+<?php endforeach; ?>
+
 </div>
+
+
+
 <div class="col-span-10 border border-white/10 relative group main-gallery overflow-hidden">
-<img alt="Oud Nocturne Main View" class="main-img-1 w-full aspect-[4/5] object-cover transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK58QUqybzYFV7jGQQ2-KE690RhpVaryeXO63ihgsqRcPmNReD6sgUQC4--KlUMcpPIQtjxZKvMmP4NVeLYlmIsNJpDo1g8O92FzjK2_whmDmvfQol3LykRNHrkJYt36YUHj4viB5NpajRSepeVAUJS0ozVR209_LPfuCV1AljvFj-R-Q-83bsr8fyK2zqbP_VaFJ-ZjE5FTfaInhxd_UC0RBg-01xCO7XREnVTaN5CaRUbEdU5H0lzmAY2prryViTCTDBvblLA"/>
-<img alt="Oud Nocturne Detail 1" class="main-img-2 w-full aspect-[4/5] object-cover transition-opacity duration-500 hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ1oCs8FAJhutrfLlc6tnFCCbURfbg_NfOzqo6DFgw5kCYkw-Nq-13-4eIGa_0daPIkyhPI3lKswO6Uu8FHvP3Ju81pOyIaDHYGAmgmJaHLfKwKA3cMmJ8HcotdPqJOLZMTx9tT9wktsCkMo8WdiuRAPy4RAiIrOhH7KWpk8Y15fXzc_t6e33e9YT8h141mcoKfBxLNT5xPz310rVcr-rHz7MQ1mwF840OmRvA60RmeFOet3yGt9MA18xWNixZ_NmDbLjybjRGEw"/>
-<img alt="Oud Nocturne Detail 2" class="main-img-3 w-full aspect-[4/5] object-cover transition-opacity duration-500 hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDit6WnFVneevtpwY7VrRxI5SZtPpDwcOL2-6xUc2kDj1-9jk9T-GPnTQU8Gg9yvocZOmRwnePXpP-HEhWgi1nIhnAVjctxAp90U95Am3eZ9oL7MuEyT1dtQBmtJwuJLYJEq6_IheE6jwhS-Icengg17VIWREKvfN5KZguZ1RZ2nMDFHTdrx2xnpH5rZPsDLcDSVZUy6oOWxu2j9dPlPbIYy0-cXelyXrBdoyQ_a9x2qTsqZbUe8hYbCISY0P_Qg8lXol1EtftX8A"/>
+
+<?php foreach ($dados['imagens'] as $i => $imagem): ?>
+
+<img
+class="main-img-<?= $i+1 ?> w-full aspect-[4/5] object-cover transition-opacity duration-500 <?= $i != 0 ? 'hidden' : '' ?>"
+src="<?= htmlspecialchars($imagem['link']) ?>"
+>
+
+<?php endforeach; ?>
+
+
 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+
 </div>
+
 </div>
 <div class="lg:col-span-5 space-y-10">
 <div>
@@ -116,7 +147,7 @@
 </div>
 </div>
 <div class="aspect-video bg-neutral-900 overflow-hidden">
-<img alt="Fragrance Creation" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" src="<?=$dados["imagens"][0]["link"]?>"/>
+<img alt="Fragrance Creation" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" src="<?=$dados["incrementos"][0]["linkexp"]?>"/>
 </div>
 </div>
 </section>
@@ -173,7 +204,7 @@
 <h2 class="text-2xl font-bold tracking-tight text-white mb-10">Fragrância Adicionada ao seu Carrinho</h2>
 <div class="w-full flex items-center p-5 border border-white/10 bg-white/[0.03] gap-6 mb-10">
 <div class="w-24 aspect-[3/4] overflow-hidden border border-white/10 shrink-0">
-<img alt="Oud Nocturne Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK58QUqybzYFV7jGQQ2-KE690RhpVaryeXO63ihgsqRcPmNReD6sgUQC4--KlUMcpPIQtjxZKvMmP4NVeLYlmIsNJpDo1g8O92FzjK2_whmDmvfQol3LykRNHrkJYt36YUHj4viB5NpajRSepeVAUJS0ozVR209_LPfuCV1AljvFj-R-Q-83bsr8fyK2zqbP_VaFJ-ZjE5FTfaInhxd_UC0RBg-01xCO7XREnVTaN5CaRUbEdU5H0lzmAY2prryViTCTDBvblLA"/>
+<img alt="<?=$dados["produto"][0]["nome"]?>" class="w-full h-full object-cover" src="<?=$dados["imagens"][1]["link"]  ?>"/>
 </div>
 <div class="text-left space-y-2">
 <p class="text-base font-bold uppercase tracking-[0.2em]"><?=$dados["produto"][0]["nome"]?></p>

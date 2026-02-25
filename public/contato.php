@@ -18,7 +18,7 @@
                     Nosso concierge particular está disponível para consultas de fragrâncias personalizadas e consultas de atacado. Por favor, aguarde 24 horas para uma resposta curada.
                 </p>
 </div>
-<form action="../src/controllers/usercontroler.php" class="space-y-8" method='post'>
+<form action="index.php?page=home" class="space-y-8" method='post'>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="relative group">
 <label class="block text-xs uppercase tracking-widest text-primary mb-2 font-semibold">NOME COMPLETO</label>

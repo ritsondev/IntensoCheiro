@@ -175,7 +175,7 @@
 <div class="max-w-3xl mx-auto space-y-10">
 <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Junte-se ao <span class="italic font-normal">Círculo Restrito</span></h2>
 <p class="text-slate-400 font-light">Receba convites para lançamentos privados, edições limitadas e insights artesanais da nossa perfumaria de elite.</p>
-<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto pt-4" method='post' action='../src/controllers/usercontroler.php'>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto pt-4" method='post' action='index.php?page=home'>
 <input type="hidden" name="action" value="customer">
 <input class="flex-1 bg-transparent border-b border-white/20 px-4 py-4 focus:border-primary focus:ring-0 text-sm outline-none transition-colors text-white placeholder-slate-600" placeholder="Endereço de Email" name ="email" type="email" required minlength="3" maxlength="320"/>
 <button class="bg-primary text-background-dark px-10 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">Subscrever</button>
