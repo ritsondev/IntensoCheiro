@@ -102,7 +102,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 <?php foreach($dados["quantidades"] as $index => $qtd):?>
 
 <div class="flex-1">
-<input class="hidden volume-input" id="vol-<?= $qtd['quantml'] ?>" name="volume" <?= $index === 0 ? 'checked' : '' ?> onchange="updateVolume(<?= $qtd['quantml'] ?>, <?= $qtd['preco'] ?>)" type="radio" value="<?= $qtd['quantml'] ?>"/>
+<input class="hidden volume-input" id="vol-<?= $qtd['quantml'] ?>" name="volume" <?= $index === 0 ? 'checked' : '' ?> onchange="updateVolume(<?= $qtd['quantml'] ?>, <?= $qtd['preco'] ?>,<?= $qtd['quantidade'] ?>)" type="radio" value="<?= $qtd['quantml'] ?>"/>
 <label class="volume-label flex items-center justify-center py-3 border border-primary text-white/80 text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-300 hover:bg-primary/5" for="vol-<?= $qtd['quantml'] ?>"><?= $qtd['quantml'] ?>ml</label>
 </div>
 
@@ -195,9 +195,11 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
         const mainPriceSpan = document.getElementById('main-price');
         const modalPriceSpan = document.getElementById('modal-price');
         const modalVolumeSpan = document.getElementById('modal-volume');
-        const maxQty = <?=$dados['quantidades'][0]['quantidade']?>; // limite máximo
+        let maxQty = <?=$dados['quantidades'][0]['quantidade']?>; // limite máximo
 
-        function updateVolume(vol, price) {
+        function updateVolume(vol, price, max) {
+            quantity = 1;
+            maxQty = max;
             currentVolume = vol + 'ML';
             currentPrice = price;
             mainPriceContainer.style.opacity = '0';
@@ -207,15 +209,14 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
             }, 200);
             updateDisplay();
         }
-        function recivequanty(){
         
-        }
         function updateDisplay() {
             qtyDisplay.innerText = quantity;
             btnQtyDisplay.innerText = quantity;
             modalQty.innerText = quantity;
             modalPriceSpan.innerText = currentPrice.toFixed();
             modalVolumeSpan.innerText = currentVolume;
+
         }
         function incrementQty() {
             if (quantity < maxQty) {
