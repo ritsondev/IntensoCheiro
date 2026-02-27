@@ -44,7 +44,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 <?php foreach ($dados['imagens'] as $i => $imagem): ?>
 
 <img
-class="main-img-<?= $i+1 ?> w-full aspect-[4/5] object-cover transition-opacity duration-500 <?= $i != 0 ? 'hidden' : '' ?>"
+class="main-img-<?= $i+1 ?> w-full h-full object-contain object-center transition-opacity duration-500 <?= $i != 0 ? 'hidden' : '' ?>" 
 src="<?= htmlspecialchars($imagem['link']) ?>"
 >
 
@@ -72,21 +72,21 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 <span class="material-symbols-outlined text-primary mt-1">auto_awesome</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Topo</h4>
-<p class="text-sm text-white/60">Açafrão, Cardamomo, Pimenta Preta</p>
+<p class="text-sm text-white/60"><?=$dados['incrementos'][0]['notas_topo']?></p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">favorite</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Coração</h4>
-<p class="text-sm text-white/60">Oud do Camboja, Jasmim Noturno, Rosa Turca</p>
+<p class="text-sm text-white/60"><?=$dados['incrementos'][0]['notas_coracao']?></p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <span class="material-symbols-outlined text-primary mt-1">forest</span>
 <div>
 <h4 class="text-[11px] uppercase tracking-widest font-bold mb-1">Notas de Base</h4>
-<p class="text-sm text-white/60">Couro, Âmbar, Patchouli, Sândalo</p>
+<p class="text-sm text-white/60"><?=$dados['incrementos'][0]['notas_base']?></p>
 </div>
 </div>
 </div>
@@ -151,46 +151,6 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 </div>
 </div>
 </section>
-<section class="mt-32">
-<div class="flex items-end justify-between mb-12 border-b border-white/5 pb-6">
-<h2 class="text-3xl font-bold">Você Também Pode Buscar</h2>
-<a class="text-[10px] uppercase tracking-widest text-primary font-bold hover:text-white transition-colors" href="index.php?page=collection">Ver Coleção Completa</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="group">
-<div class="aspect-[3/4] overflow-hidden border border-white/5 group-hover:border-primary/30 transition-all mb-4">
-<img alt="Cerulean Drift" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSs5nwHfTiNM_T8Nx9_0C-9vjrYfA-JmGrQXsTiVBGqITnTSh0wwi6Zb6SyUhjPCKXUtncdHszOsQsOderJnEiyuV8SqIDRqg3P8abK4Z_lQyYhTge60qWTJqtKeMSlBExk3PMlTxzVNa-fJB_zYuyy0a9FWv0HlkDumUG2Ce2FMYidlO8v14NNPfcmGgB967JP66xHw7SwySu0oNqi8jP64Fh-UqkQ9a2j0VH5wHZPY2leiiAgeVq05ZENlgnlQE9umwjBFAWqw"/>
-</div>
-<h3 class="text-lg font-bold">Cerulean Drift</h3>
-<p class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Fresco • Aquático</p>
-<p class="text-primary font-bold tracking-widest text-sm">$210.00</p>
-</div>
-<div class="group">
-<div class="aspect-[3/4] overflow-hidden border border-white/5 group-hover:border-primary/30 transition-all mb-4">
-<img alt="Imperial Rose" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt5CGjXO36FSB1zXi6gtYv6Gn6tqJQVxc6aoed0dmnkermbHiAEzNnx7eBmwoWzSNrtoviUKt7HNnN_t9US-ZYgVQ3h95x9Fk4mSPcaDyW2-JH77OXaaP3E6-2YDYK6mHFucOmCb1auPE7MKM62h3oISQ-2x5Gcp9rWlzW-ROC-v0f65ArUHF34ipax1aoE38FMXGRjgCqxzjNHupPgG9ejH3ji7yeVhpWEOsjOS3LWegCXc10_32-EEDQxiwvfuipZ9QEsfG-qA"/>
-</div>
-<h3 class="text-lg font-bold">Imperial Rose</h3>
-<p class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Floral • Regado</p>
-<p class="text-primary font-bold tracking-widest text-sm">$275.00</p>
-</div>
-<div class="group">
-<div class="aspect-[3/4] overflow-hidden border border-white/5 group-hover:border-primary/30 transition-all mb-4">
-<img alt="Midnight Suede" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ1oCs8FAJhutrfLlc6tnFCCbURfbg_NfOzqo6DFgw5kCYkw-Nq-13-4eIGa_0daPIkyhPI3lKswO6Uu8FHvP3Ju81pOyIaDHYGAmgmJaHLfKwKA3cMmJ8HcotdPqJOLZMTx9tT9wktsCkMo8WdiuRAPy4RAiIrOhH7KWpk8Y15fXzc_t6e33e9YT8h141mcoKfBxLNT5xPz310rVcr-rHz7MQ1mwF840OmRvA60RmeFOet3yGt9MA18xWNixZ_NmDbLjybjRGEw"/>
-</div>
-<h3 class="text-lg font-bold">Midnight Suede</h3>
-<p class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Couro • Sensual</p>
-<p class="text-primary font-bold tracking-widest text-sm">$320.00</p>
-</div>
-<div class="group">
-<div class="aspect-[3/4] overflow-hidden border border-white/5 group-hover:border-primary/30 transition-all mb-4">
-<img alt="Saffron Veil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLej2ZcZ7_De85bqKH6LA8q-GKPsHh76HWYyALJV0MrlKKXAZkAJoSKRVTcO72J4GjWRXCmQrQbLhUSGbjnO2aR7F6pkGQe6-5J_JKH_g_F1ZRz_hDZ_WDdCROp0sy7KThld1KwKmgZ-C7bKJhucXi2UXZJYyjHj2HlgNv49oIASiVMGgskndboL4-wjunf06X_ZWMCS7ohnjIOqXP3M16nBmUp2tsOyvW42WSPD6P0xH_kugk0hieaIqWPaatCtNGmWcd2hTMIA"/>
-</div>
-<h3 class="text-lg font-bold">Saffron Veil</h3>
-<p class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Especiado • Quente</p>
-<p class="text-primary font-bold tracking-widest text-sm">$185.00</p>
-</div>
-</div>
-</section>
 </main>
 <div class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-md px-6" id="cart-modal-overlay">
 <div class="bg-black border border-primary/30 w-full max-w-md p-8 md:p-12 relative shadow-[0_0_60px_rgba(244,192,37,0.15)]">
@@ -235,6 +195,8 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
         const mainPriceSpan = document.getElementById('main-price');
         const modalPriceSpan = document.getElementById('modal-price');
         const modalVolumeSpan = document.getElementById('modal-volume');
+        const maxQty = <?=$dados['quantidades'][0]['quantidade']?>; // limite máximo
+
         function updateVolume(vol, price) {
             currentVolume = vol + 'ML';
             currentPrice = price;
@@ -245,6 +207,9 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
             }, 200);
             updateDisplay();
         }
+        function recivequanty(){
+        
+        }
         function updateDisplay() {
             qtyDisplay.innerText = quantity;
             btnQtyDisplay.innerText = quantity;
@@ -253,7 +218,6 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
             modalVolumeSpan.innerText = currentVolume;
         }
         function incrementQty() {
-            const maxQty = 10; // limite máximo
             if (quantity < maxQty) {
                 quantity++;
                 updateDisplay();

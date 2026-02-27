@@ -45,24 +45,24 @@
 <img alt="Extraction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src=".\assets\img\p2.png"/>
 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
 </div>
-<h4 class="font-serif text-xl mb-3 text-primary">Extração Pura</h4>
-<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Métodos ancestrais de destilação a vapor para preservar a vibração molecular de cada pétala.</p>
+<h4 class="font-serif text-xl mb-3 text-primary">Essência Refinada</h4>
+<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Notas cuidadosamente equilibradas para revelar uma fragrância sofisticada que evolui suavemente sobre a pele.</p>
 </div>
 <div class="group">
 <div class="aspect-square overflow-hidden mb-6 relative">
 <img alt="Blending" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src=".\assets\img\p12.png"/>
 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
 </div>
-<h4 class="font-serif text-xl mb-3 text-primary">Maturação em Carvalho</h4>
-<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Nossas essências repousam em barris de carvalho francês por 18 meses antes da primeira nota ser revelada.</p>
+<h4 class="font-serif text-xl mb-3 text-primary">Explosão de Notas</h4>
+<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Fragrância que combina modernidade e frescor, capturando a energia vibrante de cada acorde.</p>
 </div>
 <div class="group">
 <div class="aspect-square overflow-hidden mb-6 relative">
 <img alt="Finishing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src=".\assets\img\p11.png"/>
 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
 </div>
-<h4 class="font-serif text-xl mb-3 text-primary">O Frasco</h4>
-<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Cada garrafa é soprada artesanalmente e numerada, tornando-se uma peça única de design atemporal.</p>
+<h4 class="font-serif text-xl mb-3 text-primary">Proteção Radiante</h4>
+<p class="text-white/50 text-sm leading-relaxed uppercase tracking-wider">Filtros avançados que cuidam da pele, preservando sua saúde e vitalidade sob o sol.</p>
 </div>
 </div>
 </div>

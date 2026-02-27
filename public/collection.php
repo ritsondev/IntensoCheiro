@@ -20,9 +20,14 @@ PESQUISAR
 <label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Categoria</label>
 <select class="luxury-select">
 <option value="" class="bg-black">Todas</option>
-<option value="amadeirado" class="bg-black">Amadeirado</option>
-<option value="floral" class="bg-black">Floral</option>
-<option value="oriental" class="bg-black">Oriental</option>
+<option value="perfumes" class="bg-black">Perfumes</option>
+<option value="maquiagem" class="bg-black">Maquiagem</option>
+<option value="skincare" class="bg-black">Skincare</option>
+<option value="corpo-banho" class="bg-black">Corpo & Banho</option>
+<option value="protetor-solar" class="bg-black">Protetor Solar</option>
+<option value="cabelo" class="bg-black">Cabelo</option>
+<option value="kits-presentes" class="bg-black">Kits & Presentes</option>
+<option value="acessorios" class="bg-black">Acessórios</option>
 </select>
 </div>
 <div class="flex flex-col gap-2">
