@@ -4,10 +4,11 @@
 $produtos=new Produto('true');
 $datas_search=$produtos->search();
 
+/*
 echo '<pre>';
 print_r($datas_search);
 echo '<pre>';
-
+*/
 
 
 ?>
@@ -67,7 +68,6 @@ PESQUISAR
 </div>
 </div>
 <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-<p class="text-[11px] tracking-[0.2em] text-white/40 uppercase">Exibindo 9 de 42 fragrâncias de luxo</p>
 <div class="flex items-center space-x-2 text-[11px] uppercase tracking-widest text-primary">
 <span class="text-white/40">Ordenar por:</span>
 <select class="bg-transparent border-none text-primary focus:ring-0 text-[11px] uppercase cursor-pointer py-0">
@@ -84,7 +84,13 @@ PESQUISAR
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
 <div class="group">
 <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
-<img alt="Oud Imperial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="<?=$datas['imagens'] ?>"/>
+
+    <?php foreach ($datas_search['incrementos'] as $incremento): ?>
+        <?php if ($incremento['produto_idf_produto'] == $produto['idf_produto']): ?>
+            <img alt="<?=$produto['nome']?>" class="absolute top-0 left-0 w-full h-full object-cover" src="<?= $incremento['linkexp']; ?>"/>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
 <a href="index.php?page=produto&prod=<?=$produto['idf_produto']?>" target="_blank" rel="noopener noreferrer">
 
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
