@@ -11,7 +11,6 @@ class Verify
         'collection',
         'suporte',
         'carrinho',
-        'exclusive',
         'produto',
         'messages/emaildone',
         'messages/emailcap',

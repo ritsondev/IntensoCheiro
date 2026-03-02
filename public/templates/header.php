@@ -8,9 +8,6 @@ $numprod=$prod;
 $produto= new Produto('true');
 $dados=$produto->GetProdutoData($numprod);
 
-echo '<pre>';
-print_r($dados);
-echo '</pre>';
 if($dados==null){
 
 header('Location:../public/index.php?page=notfound');

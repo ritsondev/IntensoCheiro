@@ -58,7 +58,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 </div>
 <div class="lg:col-span-5 space-y-10">
 <div>
-<h1 class="text-5xl lg:text-6xl font-bold mb-4"><?=$dados["produto"][0]["nome"]?></h1>
+<h1 class="text-5xl lg:text-6xl font-bold mb-4" id="nome"><?=$dados["produto"][0]["nome"]?></h1>
 <p class="text-3xl font-bold text-primary tracking-wider opacity-100" id="main-price-container"><span id="main-price"><?= $dados["quantidades"][0]["preco"] ?></span>kz</p>
 </div>
 <div class="space-y-6">
@@ -164,7 +164,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 <h2 class="text-2xl font-bold tracking-tight text-white mb-10">Fragrância Adicionada ao seu Carrinho</h2>
 <div class="w-full flex items-center p-5 border border-white/10 bg-white/[0.03] gap-6 mb-10">
 <div class="w-24 aspect-[3/4] overflow-hidden border border-white/10 shrink-0">
-<img alt="<?=$dados["produto"][0]["nome"]?>" class="w-full h-full object-cover" src="<?=$dados["imagens"][1]["link"]  ?>"/>
+<img alt="<?=$dados["produto"][0]["nome"]?>" class="w-full h-full object-cover" src="<?=$dados["imagens"][0]["link"]  ?>"/>
 </div>
 <div class="text-left space-y-2">
 <p class="text-base font-bold uppercase tracking-[0.2em]"><?=$dados["produto"][0]["nome"]?></p>
@@ -188,6 +188,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
         let quantity = 1;
         let currentVolume = <?=$dados["quantidades"][0]["quantml"] ?>;
         let currentPrice = <?=$dados["quantidades"][0]["preco"] ?>;
+        const nome = document.getElementById('nome');
         const qtyDisplay = document.getElementById('qty-display');
         const btnQtyDisplay = document.getElementById('btn-qty');
         const modalQty = document.getElementById('modal-qty');
@@ -197,7 +198,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
         const modalVolumeSpan = document.getElementById('modal-volume');
         let maxQty = <?=$dados['quantidades'][0]['quantidade']?>; // limite máximo
 
-        function updateVolume(vol, price, max) {
+        function updateVolume(vol, price, max){
             quantity = 1;
             maxQty = max;
             currentVolume = vol + 'ML';

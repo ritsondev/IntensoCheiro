@@ -66,11 +66,6 @@ $stmt2->bindParam(':id', $this->id, PDO::PARAM_INT);
 $stmt2->execute();
 $incrementos = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
-//exc
-$stmt3=$pdo->prepare('SELECT * FROM exclusive WHERE produto_idf_produto=:id');
-$stmt3->bindParam(':id', $this->id, PDO::PARAM_INT);
-$stmt3->execute();
-$exclusive = $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
 //quantidade ml
 $stmt4=$pdo->prepare('SELECT * FROM ml WHERE produto_idf_produto=:id');
@@ -90,7 +85,6 @@ return [
 
     'produto' => $prodinf,
     'incrementos' => $incrementos,
-    'exclusive' => $exclusive,
     'quantidades' => $quantidades,
     'imagens'=> $imagens
 
@@ -110,6 +104,49 @@ return null;
 
 }
 
+
+public function search(){
+
+if($this->auth=='true'){
+
+$pdo = Database::connect();
+
+//inf
+$stmt1=$pdo->prepare('SELECT * FROM produto');
+$stmt1->execute();
+$prodinf = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+
+
+//inc
+$stmt2=$pdo->prepare('SELECT * FROM incrementos');
+$stmt2->execute();
+$incrementos = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+
+//img produto
+$stmt4=$pdo->prepare('SELECT * FROM img_product');
+$stmt4->execute();
+$imagens = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+
+if(!empty($prodinf)){
+
+return [
+
+    'produto' => $prodinf,
+    'incrementos' => $incrementos,
+    'imagens'=> $imagens
+
+];
+
+}else{
+
+return null;
+
+}
+
+}
+
+}
 
 }
 

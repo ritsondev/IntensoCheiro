@@ -1,4 +1,7 @@
-<?php defined('CONTROL') or die('Acesso negado')?>
+<?php 
+defined('CONTROL') or die('Acesso negado');
+
+?>
 <main class="relative z-10 pt-32 pb-24">
 <div class="container mx-auto px-6">
 <div class="mb-16">
@@ -28,7 +31,7 @@
 </div>
 <div>
 <h3 class="font-serif text-lg font-bold mb-1">Shades of Bliss</h3>
-<p class="text-xs text-slate-500 uppercase tracking-widest">100ml / Parfum</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">100ml</p>
 <button class="mt-4 text-[10px] tracking-widest uppercase text-primary/60 hover:text-primary transition-colors flex items-center">
 <span class="material-symbols-outlined text-sm mr-1">close</span> Remover
                                                 </button>
@@ -37,40 +40,39 @@
 </td>
 <td class="py-8">
 <div class="flex items-center justify-center space-x-4">
-<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors">
+
+<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors"
+        onmousedown="startDecrement()"
+        onmouseup="stopChange()"
+        onmouseleave="stopChange()">
+
 <span class="material-symbols-outlined text-sm">remove</span>
+
 </button>
-<span class="text-sm font-medium">01</span>
-<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors">
+
+<span class="text-sm font-medium" id="qty-display">01</span>
+
+<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors"
+        onmousedown="startIncrement()"
+        onmouseup="stopChange()"
+        onmouseleave="stopChange()">
+
 <span class="material-symbols-outlined text-sm">add</span>
+
 </button>
+
 </div>
 </td>
 <td class="py-8 text-right">
 <p class="font-serif text-lg font-bold">45.000kz</p>
 </td>
 </tr>
-<tr>
-<td class="py-8">
-<div class="flex items-center justify-center space-x-4">
-<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors">
-<span class="material-symbols-outlined text-sm">remove</span>
-</button>
-<span class="text-sm font-medium">01</span>
-<button class="w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors">
-<span class="material-symbols-outlined text-sm">add</span>
-</button>
-</div>
-</td>
-<td class="py-8 text-right">
-<p class="font-serif text-lg font-bold">45.000kz</p>
-</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="mt-12">
-<a class="inline-flex items-center text-[10px] tracking-[0.3em] uppercase font-bold text-primary/80 hover:text-primary transition-colors" href="#">
+<a class="inline-flex items-center text-[10px] tracking-[0.3em] uppercase font-bold text-primary/80 hover:text-primary transition-colors" href="index.php?page=collection">
 <span class="material-symbols-outlined text-lg mr-2">arrow_back</span>
                             Continuar Comprando
                         </a>
@@ -111,3 +113,45 @@
 </div>
 </div>
 </main>
+
+<script>
+
+let quantity = 1;
+let maxQty = 100;
+let timer = null;
+
+let qtyDisplay = document.getElementById('qty-display');
+
+function updateDisplay() {
+    qtyDisplay.innerText = quantity.toString().padStart(2,'0');
+}
+
+function incrementQty() {
+    if (quantity < maxQty) {
+        quantity++;
+        updateDisplay();
+    }
+}
+
+function decrementQty() {
+    if (quantity > 1) {
+        quantity--;
+        updateDisplay();
+    }
+}
+
+function startIncrement() {
+    incrementQty();
+    timer = setInterval(incrementQty, 200); // aumenta a cada 200ms
+}
+
+function startDecrement() {
+    decrementQty();
+    timer = setInterval(decrementQty, 200); // diminui a cada 200ms
+}
+
+function stopChange() {
+    clearInterval(timer);
+}
+
+</script>

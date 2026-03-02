@@ -74,7 +74,6 @@
 </div>
 <div class="flex space-x-4 w-full md:w-auto justify-center">
 <a href="index.php?page=collection"><button class="px-6 sm:px-8 py-3 text-[10px] tracking-[0.3em] uppercase border border-white/10 hover:border-primary transition-colors text-white">Todos os Aromas</button></a>
-<a href="index.php?page=exclusive"><button class="px-6 sm:px-8 py-3 text-[10px] tracking-[0.3em] uppercase border border-white/10 hover:border-primary transition-colors text-white">Edição Limitada</button></a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
