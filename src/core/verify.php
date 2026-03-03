@@ -12,6 +12,7 @@ class Verify
         'suporte',
         'carrinho',
         'produto',
+        'checkout',
         'messages/emaildone',
         'messages/emailcap',
         'messages/smsdone',

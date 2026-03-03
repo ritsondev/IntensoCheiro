@@ -69,6 +69,38 @@ $prod=$_GET['prod'];
 
 }
 
+//carrinho logica
+
+if (isset($_SESSION['carrinho'])) {
+        $prodcar_inf=$_SESSION['carrinho'];
+        $subtotal=0;
+        $total=0;
+}
+
+if (isset($_GET['delete'])) {
+
+    $index = (int) $_GET['delete']; // força ser número
+
+    if (isset($_SESSION['carrinho'][$index])) {
+        unset($_SESSION['carrinho'][$index]);
+        $_SESSION['carrinho'] = array_values($_SESSION['carrinho']);
+        // evita repetir a remoção ao atualizar página
+        header("Location:index.php?page=carrinho");
+        exit();
+  
+}
+}
+
+if($page=='checkout'){
+
+if(empty($_SESSION['carrinho'])  && empty($_POST)){
+
+header('Location:index.php?page=carrinho');
+
+}
+
+}
+
 // verifica se a página existe e é permitida
 $pageFile = $verify->resolvePublicPage($page);
 

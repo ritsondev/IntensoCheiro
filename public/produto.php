@@ -1,4 +1,29 @@
-<?php defined('CONTROL') or die('Acesso negado')?>
+<?php defined('CONTROL') or die('Acesso negado');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajax'])) {
+
+    $produto = [
+        "nome" => $_POST['nome'],
+        "preco" => $_POST['preco'],
+        "volume" => $_POST['volume'],
+        "quantidade" => $_POST['quantidade'],
+        "img"=> $_POST['img'],
+        "max"=> $_POST['max']
+    ];
+
+    if (!isset($_SESSION['carrinho'])) {
+        $_SESSION['carrinho'] = [];
+    }
+
+    $_SESSION['carrinho'][] = $produto;
+
+    echo json_encode(["success" => true]);
+    exit;
+}
+
+
+
+?>
 <input class="hidden" id="cart-modal-toggle" type="checkbox"/>
 <main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -232,8 +257,30 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
             }
         }
         function addToCart() {
-            const toggle = document.getElementById('cart-modal-toggle');
-            updateDisplay();
-            toggle.checked = true;
+
+        const data = new FormData();
+        data.append("ajax", true);
+        data.append("nome", document.getElementById("nome").innerText);
+        data.append("preco", currentPrice);
+        data.append("volume", currentVolume);
+        data.append("quantidade", quantity);
+        data.append("img", <?= json_encode($dados['incrementos'][0]['linkexp']) ?>);
+        data.append("max", maxQty);
+        
+
+        fetch(window.location.href, {
+            method: "POST",
+            body: data
+        })
+        .then(res => res.json())
+        .then(response => {
+            if(response.success){
+                document.getElementById('cart-modal-toggle').checked = true;
+            }
+        });
+
+        const toggle = document.getElementById('cart-modal-toggle');
+        updateDisplay();
+        toggle.checked = true;
         }
     </script>
