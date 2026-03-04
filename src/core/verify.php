@@ -16,7 +16,9 @@ class Verify
         'messages/emaildone',
         'messages/emailcap',
         'messages/smsdone',
-        'messages/smscap'
+        'messages/smscap',
+        'messages/checkdone',
+        'messages/checkcap'
     ];
 
     /**

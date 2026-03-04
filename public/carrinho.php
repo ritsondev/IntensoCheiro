@@ -211,7 +211,7 @@ function stopChange() {
     clearInterval(timer);
 }
 
-// 🔥 Atualiza subtotal, total e envia via FormData
+// Atualiza subtotal, total e envia via FormData
 function updateResumo() {
     const linhas = document.querySelectorAll('tbody tr');
     let subtotal = 0;

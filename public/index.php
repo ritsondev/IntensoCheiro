@@ -91,13 +91,14 @@ if (isset($_GET['delete'])) {
 }
 }
 
-if($page=='checkout'){
 
-if(empty($_SESSION['carrinho'])  && empty($_POST)){
+if ($page === 'checkout') {
 
-header('Location:index.php?page=carrinho');
-
-}
+    // Se o carrinho estiver vazio ou nenhum POST enviado
+    if (empty($_SESSION['carrinho']) || empty($_POST)) {
+        header('Location: index.php?page=carrinho');
+        exit;
+    }
 
 }
 

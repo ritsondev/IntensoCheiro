@@ -1,6 +1,18 @@
-<?php defined('CONTROL') or die('Acesso negado');
+<?php 
+
+defined('CONTROL') or die('Acesso negado');
+
+if($page==='checkout'){
+
+$check_datas=$_POST;
+$get_datas=$_SESSION['carrinho'];
+
+}
+
 ?>
 <main class="relative z-10 pt-32 pb-24">
+
+<form action="index.php?page=messages/checkdone" method="post">
 <div class="container mx-auto px-6">
 <div class="mb-16">
 <div class="flex items-center space-x-3 mb-4">
@@ -21,20 +33,20 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Nome</label>
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Seu nome" type="text"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Seu nome" type="text" name="nome" tabindex="1" autofocus required minlength="3" maxlength="16"/>
 </div>
 <div class="space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Sobrenome</label>
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Seu sobrenome" type="text"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Seu sobrenome" type="text" name="sobrenome" tabindex="2" required minlength="3" maxlength="16"/>
 </div>
 <div class="md:col-span-2 space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Endereço de Entrega</label>
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Rua, Número, Complemento, Bairro e NIF" type="text"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700" placeholder="Rua, Número, Complemento, Bairro e NIF" type="text" tabindex="3" name="endereco" required minlength="10" maxlength="55"/>
 </div>
 <div class="md:col-span-2 space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Número do WhatsApp</label>
 <div class="relative">
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 924 697 927" type="tel"/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 924 697 927" type="tel" tabindex="4" name="tel" minlength="9" maxlength="12" required/>
 <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-sm text-primary/60">chat</span>
 </div>
 </div>
@@ -83,55 +95,109 @@
 </div>
 </div>
 <div class="lg:col-span-4">
-<div class="bg-neutral-dark/50 backdrop-blur-md border border-primary/10 p-8 rounded-xl sticky top-32">
-<h2 class="font-serif text-2xl font-bold mb-8">Resumo do Pedido</h2>
+  <div class="bg-neutral-dark/50 backdrop-blur-md border border-primary/10 p-8 rounded-xl sticky top-32">
+    <h2 class="font-serif text-2xl font-bold mb-8">Resumo do Pedido</h2>
+
 <div class="space-y-6 mb-8">
-<div class="flex items-center space-x-4 pb-4 border-b border-primary/5">
-<div class="w-16 h-16 bg-neutral-dark rounded border border-primary/5 flex items-center justify-center overflow-hidden">
-<img alt="L'Essence Royale" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNf6mRJxynHsvS0KDiqsXhPRAJDoFtaNoFBzz7aYrSZV-2yKiVKJcq91QyhcUzpnjUSL292Z5NLLSQFyK2pgugHyjBOG1jCfm9LodH8lUPnVnxYpXvjliA0Myxh0dJ-P4fy8YMsb2PDcHozkcYphSIOodkLGmdWdE9w13_2RNv3mj_7f9Pf8KmgjsaV4ns8EeLgGh4mgZxd77aorR2PYDYl9rhCMfCqntPLjPiIOMT5GYiUWBPQZHlnjShDrEwe1GAxjTRHjzPOg"/>
+
+  <!-- H2 mostrando produtos restantes -->
+  <?php 
+    $total_produtos = count($get_datas);
+    $exibidos = 2;
+    $restantes = $total_produtos - $exibidos;
+  ?>
+  <?php if($restantes > 0): ?>
+    <h2 class="text-yellow-400 font-semibold text-center mb-4">
+      E mais <?= $restantes ?> produto(s) no seu pedido
+    </h2>
+  <?php endif; ?>
+
+  <!-- Lista dos 2 primeiros produtos -->
+  <?php foreach(array_slice($get_datas, 0, 2) as $datas): ?>
+    <div class="flex items-center space-x-4 pb-4 border-b border-primary/5">
+
+      <div class="w-16 h-16 bg-transparent rounded border border-primary/5 flex items-center justify-center overflow-hidden">
+        <img alt="<?= $datas['nome'] ?>" class="w-12 h-12 object-contain"
+             src="<?= $datas['img'] ?>"/>
+      </div>
+
+      <div class="flex-1">
+        <h4 class="font-serif text-sm font-bold text-white"><?= $datas['nome'] ?></h4>
+        <p class="text-[10px] text-slate-400 uppercase tracking-widest">
+          Qtd: <?= $datas['quantidade'] ?>
+        </p>
+      </div>
+
+      <span class="text-sm font-serif text-yellow-400"><?= $datas['preco'] ?>kz</span>
+
+    </div>
+  <?php endforeach; ?>
+
 </div>
-<div class="flex-1">
-<h4 class="font-serif text-sm font-bold">L'Essence Royale</h4>
-<p class="text-[10px] text-slate-500 uppercase tracking-widest">Qtd: 01</p>
+
+
+    <!-- Resumo financeiro -->
+    <div class="space-y-4 mb-10">
+      <div class="flex justify-between items-center text-xs">
+        <span class="text-slate-400 font-light tracking-wide uppercase">Subtotal</span>
+        <span class="font-medium resumo-subtotal"><?=$check_datas['subtotal']?>kz</span>
+      </div>
+      <div class="flex justify-between items-center text-xs">
+        <span class="text-slate-400 font-light tracking-wide uppercase">Envio</span>
+        <span class="font-medium text-primary resumo-envio">Grátis</span>
+      </div>
+      <div class="pt-6 border-t border-primary/10 flex justify-between items-center">
+        <span class="font-serif text-xl font-bold uppercase tracking-widest">Total</span>
+        <span class="font-serif text-2xl font-bold text-primary resumo-total">
+    <?=$check_datas['total']?>kz
+</span>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <button class="w-full py-5 bg-primary text-background-dark font-bold text-xs uppercase tracking-[0.25em] rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(244,192,37,0.3)] hover:scale-[1.01]">
+        FAZER PEDIDO
+      </button>
+      <div class="flex items-center justify-center space-x-2 text-slate-500 text-[9px] tracking-[0.2em] uppercase py-2">
+        <span class="material-symbols-outlined text-sm">verified</span>
+        <span>Reserva Prioritária Garantida</span>
+      </div>
+    </div>
+  </div>
 </div>
-<span class="text-sm font-serif">R$ 1.450,00</span>
-</div>
-<div class="flex items-center space-x-4 pb-4 border-b border-primary/5">
-<div class="w-16 h-16 bg-neutral-dark rounded border border-primary/5 flex items-center justify-center overflow-hidden">
-<img alt="Oud Mystique" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNf6mRJxynHsvS0KDiqsXhPRAJDoFtaNoFBzz7aYrSZV-2yKiVKJcq91QyhcUzpnjUSL292Z5NLLSQFyK2pgugHyjBOG1jCfm9LodH8lUPnVnxYpXvjliA0Myxh0dJ-P4fy8YMsb2PDcHozkcYphSIOodkLGmdWdE9w13_2RNv3mj_7f9Pf8KmgjsaV4ns8EeLgGh4mgZxd77aorR2PYDYl9rhCMfCqntPLjPiIOMT5GYiUWBPQZHlnjShDrEwe1GAxjTRHjzPOg"/>
-</div>
-<div class="flex-1">
-<h4 class="font-serif text-sm font-bold">Oud Mystique</h4>
-<p class="text-[10px] text-slate-500 uppercase tracking-widest">Qtd: 01</p>
-</div>
-<span class="text-sm font-serif">R$ 1.290,00</span>
-</div>
-</div>
-<div class="space-y-4 mb-10">
-<div class="flex justify-between items-center text-xs">
-<span class="text-slate-400 font-light tracking-wide uppercase">Subtotal</span>
-<span class="font-medium">R$ 2.740,00</span>
-</div>
-<div class="flex justify-between items-center text-xs">
-<span class="text-slate-400 font-light tracking-wide uppercase">Envio</span>
-<span class="font-medium text-primary">Grátis</span>
-</div>
-<div class="pt-6 border-t border-primary/10 flex justify-between items-center">
-<span class="font-serif text-xl font-bold uppercase tracking-widest">Total</span>
-<span class="font-serif text-2xl font-bold text-primary">R$ 2.740,00</span>
-</div>
-</div>
-<div class="space-y-4">
-<button class="w-full py-5 bg-primary text-background-dark font-bold text-xs uppercase tracking-[0.25em] rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(244,192,37,0.3)] hover:scale-[1.01]">
-                                FAZER PEDIDO
-                            </button>
-<div class="flex items-center justify-center space-x-2 text-slate-500 text-[9px] tracking-[0.2em] uppercase py-2">
-<span class="material-symbols-outlined text-sm">verified</span>
-<span>Reserva Prioritária Garantida</span>
-</div>
-</div>
-</div>
-</div>
+</form>
+<!-- JavaScript para atualizar envio e total -->
+<script>
+  const shippingRadios = document.querySelectorAll('input[name="shipping"]');
+  const envioSpan = document.querySelector('.resumo-envio');
+  const totalSpan = document.querySelector('.resumo-total');
+
+  // Pega subtotal já renderizado pelo PHP
+  let subtotal = parseFloat(document.querySelector('.resumo-subtotal').innerText.replace(/\D/g,''));
+
+  function atualizarResumo() {
+    const selecionado = document.querySelector('input[name="shipping"]:checked');
+    if (!selecionado) return;
+
+    const label = selecionado.closest('label');
+    const valorSpan = label.querySelector('span.text-sm:last-child');
+
+    let valorEnvio = 0;
+    if (valorSpan.innerText.toLowerCase().includes('grátis')) {
+      valorEnvio = 0;
+      envioSpan.innerText = 'Grátis';
+    } else {
+      valorEnvio = parseFloat(valorSpan.innerText.replace(/\D/g,''));
+      envioSpan.innerText = valorEnvio + 'kz';
+    }
+
+    totalSpan.innerText = (subtotal + valorEnvio + 500) + 'kz';
+  }
+
+  shippingRadios.forEach(radio => radio.addEventListener('change', atualizarResumo));
+  atualizarResumo(); // Inicializa ao carregar a página
+
+</script>
 </div>
 </div>
 </main>
