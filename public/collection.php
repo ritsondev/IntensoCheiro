@@ -27,46 +27,6 @@ PESQUISAR
 </div>
 </div>
 
-
-<div class="flex flex-wrap items-center gap-6 w-full lg:w-auto">
-<div class="flex flex-col gap-2">
-<label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Categoria</label>
-<select class="luxury-select">
-<option value="*" class="bg-black">Todas</option>
-<option value="perfumes" class="bg-black">Perfumes</option>
-<option value="maquiagem" class="bg-black">Maquiagem</option>
-<option value="skincare" class="bg-black">Skincare</option>
-<option value="corpo-banho" class="bg-black">Corpo & Banho</option>
-<option value="protetor-solar" class="bg-black">Protetor Solar</option>
-<option value="cabelo" class="bg-black">Cabelo</option>
-<option value="kits-presentes" class="bg-black">Kits & Presentes</option>
-<option value="acessorios" class="bg-black">Acessórios</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Gênero</label>
-<select class="luxury-select">
-<option value="*" class="bg-black">Todos</option>
-<option value="masculino" class="bg-black">Masculino</option>
-<option value="feminino" class="bg-black">Feminino</option>
-<option value="unissex" class="bg-black">Unissex</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[9px] uppercase tracking-[0.4em] text-primary/50 ml-1">Tipo</label>
-<select class="luxury-select">
-<option value="*" class="bg-black">Todas</option>
-<option value="normal" class="bg-black">Normal</option>
-<option value="esgotando" class="bg-black">Esgotando</option>
-</select>
-</div>
-<div class="pt-6">
-<button class="border border-primary text-primary hover:bg-primary hover:text-black font-bold text-[9px] uppercase tracking-[0.2em] px-8 py-2.5 rounded-sm transition-all duration-300">
-                            Aplicar Filtros
-                        </button>
-</div>
-</div>
-</div>
 <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
 <div class="flex items-center space-x-2 text-[11px] uppercase tracking-widest text-primary">
 <span class="text-white/40">Ordenar por:</span>
@@ -78,36 +38,51 @@ PESQUISAR
 </div>
 </div>
 </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
 
 <?php foreach ($datas_search['produto'] as $produto): ?>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
-<div class="group">
-<div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
+    <div class="group">
+        <div class="relative aspect-[3/4] bg-neutral-dark rounded-lg overflow-hidden mb-8 border border-white/5 group-hover:border-primary/30 transition-all duration-500">
 
-    <?php foreach ($datas_search['incrementos'] as $incremento): ?>
-        <?php if ($incremento['produto_idf_produto'] == $produto['idf_produto']): ?>
-            <img alt="<?=$produto['nome']?>" class="absolute top-0 left-0 w-full h-full object-cover" src="<?= $incremento['linkexp']; ?>"/>
-        <?php endif; ?>
-    <?php endforeach; ?>
+            <?php foreach ($datas_search['incrementos'] as $incremento): ?>
+                <?php if ($incremento['produto_idf_produto'] == $produto['idf_produto']): ?>
+                    <img alt="<?=$produto['nome']?>" 
+                         class="absolute top-0 left-0 w-full h-full object-cover" 
+                         src="<?= $incremento['linkexp']; ?>"/>
+                <?php endif; ?>
+            <?php endforeach; ?>
 
-<a href="index.php?page=produto&prod=<?=$produto['idf_produto']?>" target="_blank" rel="noopener noreferrer">
+            <a href="index.php?page=produto&prod=<?=$produto['idf_produto']?>" target="_blank">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] text-center cursor-pointer">
+                        Adicionar à Bolsa
+                    </label>
+                </div>
+            </a>
 
-<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-<label class="w-full bg-primary text-background-dark py-4 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] shadow-neon-gold text-center cursor-pointer hover:brightness-110 active:scale-[0.98] transition-all" >Adicionar à Bolsa</label>
+        </div>
+
+        <div class="text-center">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2">
+                <?=$produto['title3']; ?>
+            </p>
+            <h3 class="text-3xl font-light text-white mb-3 italic tracking-tight">
+                <?=$produto['nome']?>
+            </h3>
+            <p class="text-primary text-xl font-medium tracking-[0.1em]">
+                <?=$produto['preco_base']?> Kz
+            </p>
+        </div>
+    </div>
+
+<?php endforeach; ?>
+
 </div>
 
-</a>
-</div>
-<div class="text-center">
-<p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 mb-2"><?=$produto['title3']; ?></p>
-<h3 class="text-3xl font-light text-white mb-3 italic tracking-tight"><?=$produto['nome']?></h3>
-<p class="text-primary text-xl font-medium tracking-[0.1em]"><?=$produto['preco_base']?> Kz</p>
-</div>
-</div>
 <div class="mt-24 text-center">
-
-<?php endforeach;?>
 
 <button class="px-20 py-5 border border-primary/20 hover:border-primary text-primary text-[10px] uppercase tracking-[0.5em] transition-all rounded-sm hover:bg-primary/5">
                 Descobrir Mais

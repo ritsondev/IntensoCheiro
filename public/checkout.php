@@ -6,13 +6,14 @@ if($page==='checkout'){
 
 $check_datas=$_POST;
 $get_datas=$_SESSION['carrinho'];
-
 }
-
+echo '<pre>';
+print_r($get_datas);
+echo '<pre>';
 ?>
 <main class="relative z-10 pt-32 pb-24">
 
-<form action="index.php?page=messages/checkdone" method="post">
+<form action="index.php?page=index" method="post">
 <div class="container mx-auto px-6">
 <div class="mb-16">
 <div class="flex items-center space-x-3 mb-4">
@@ -46,8 +47,15 @@ $get_datas=$_SESSION['carrinho'];
 <div class="md:col-span-2 space-y-2">
 <label class="text-[10px] tracking-widest uppercase text-slate-500">Número do WhatsApp</label>
 <div class="relative">
-<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 924 697 927" type="tel" tabindex="4" name="tel" minlength="9" maxlength="12" required/>
+<input class="w-full bg-transparent border border-primary/20 rounded-lg px-4 py-3 text-sm focus:border-primary transition-all placeholder:text-slate-700 pl-10" placeholder="(+244) 924 697 927" type="number" tabindex="4" name="numero" minlength="9" maxlength="12" required/>
 <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-sm text-primary/60">chat</span>
+</div>
+<div>
+
+<input type="hidden" name='elementos' value="<?= htmlspecialchars(json_encode($get_datas), ENT_QUOTES) ?>">
+<input type="hidden" name="subtotal" id="input-subtotal" value="<?=$check_datas['subtotal']?>">
+<input type="hidden" name="total" id="input-total" value="<?=$check_datas['total']?>">
+
 </div>
 </div>
 </div>
@@ -61,8 +69,9 @@ $get_datas=$_SESSION['carrinho'];
 </div>
 <div class="space-y-4">
 <label class="flex items-center p-4 border border-primary/40 rounded-lg bg-primary/5 cursor-pointer transition-all">
-<input checked="" class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" type="radio"/>
+<input checked="" class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" value="grátis" type="radio"/>
 <div class="ml-4 flex-1">
+<input type="hidden" name="action" value="cliente">
 <div class="flex justify-between items-center">
 <span class="text-sm font-semibold uppercase tracking-wider">Intenso cheiro</span>
 <span class="text-primary text-sm">Grátis</span>
@@ -71,7 +80,7 @@ $get_datas=$_SESSION['carrinho'];
 </div>
 </label>
 <label class="flex items-center p-4 border border-primary/10 rounded-lg hover:border-primary/30 cursor-pointer transition-all">
-<input class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" type="radio"/>
+<input class="form-radio text-primary bg-transparent border-primary/40 focus:ring-0" name="shipping" type="radio" value="premium"/>
 <div class="ml-4 flex-1">
 <div class="flex justify-between items-center">
 <span class="text-sm font-semibold uppercase tracking-wider">Intenso Premium</span>

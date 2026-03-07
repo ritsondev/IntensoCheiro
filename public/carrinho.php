@@ -39,7 +39,7 @@ defined('CONTROL') or die('Acesso negado');
 </div>
 <div>
 <h3 class="font-serif text-lg font-bold mb-1"><?=$produto['nome']?></h3>
-<p class="text-xs text-slate-500 uppercase tracking-widest"><?=$produto['volume']?>ML</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest"><?=$produto['volume']?></p>
 <a href="index.php?page=carrinho&delete=<?=$index?>">
 <button class="mt-4 text-[10px] tracking-widest uppercase text-primary/60 hover:text-primary transition-colors flex items-center" type="button">
 <span class="material-symbols-outlined text-sm mr-1">close</span> Remover

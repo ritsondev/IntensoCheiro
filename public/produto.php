@@ -3,6 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajax'])) {
 
     $produto = [
+        "id" => $_POST['id'],
         "nome" => $_POST['nome'],
         "preco" => $_POST['preco'],
         "volume" => $_POST['volume'],
@@ -260,6 +261,7 @@ src="<?= htmlspecialchars($imagem['link']) ?>"
 
         const data = new FormData();
         data.append("ajax", true);
+        data.append("id", <?=json_encode($prod)?>);
         data.append("nome", document.getElementById("nome").innerText);
         data.append("preco", currentPrice);
         data.append("volume", currentVolume);
